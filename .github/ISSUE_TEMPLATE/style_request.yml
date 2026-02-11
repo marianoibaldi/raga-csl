@@ -1,0 +1,26 @@
+name: Mejora / Style change request
+description: Suggest formatting or rule improvements
+title: "[STYLE] "
+labels: ["enhancement"]
+
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto / Context
+      description: Norma, guía o editorial que requiere el cambio
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propuesta / Proposal
+      description: Explicá claramente el formato deseado
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Ejemplos / Examples (before → after)

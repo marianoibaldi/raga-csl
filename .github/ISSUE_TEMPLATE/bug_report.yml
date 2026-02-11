@@ -1,0 +1,77 @@
+name: Bug / Problema con el estilo
+description: Report a formatting problem with the CSL style
+title: "[BUG] "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🇪🇸 Español
+        Completá la información para que podamos reproducir el problema.
+
+        ## 🇬🇧 English
+        Please provide enough details so we can reproduce the issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: ¿Qué está pasando? / What is happening?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ¿Qué esperabas obtener? / Expected result
+      description: Mostrá/Show the correct formatting
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado actual / Actual result
+    validations:
+      required: true
+
+  - type: dropdown
+    id: manager
+    attributes:
+      label: Gestor o motor de citas / Citation manager
+      options:
+        - Zotero
+        - Mendeley
+        - Pandoc / citeproc
+        - Quarto
+        - LaTeX / BibLaTeX
+        - Otro / Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Formato del archivo / Reference format
+      options:
+        - .bib (BibTeX)
+        - .json (CSL JSON)
+        - .ris
+        - .xml
+        - Otro / Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample
+    attributes:
+      label: Registro mínimo / Minimal reference sample
+      description: Pegá SOLO el ítem problemático / Paste ONLY the problematic entry
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versión del estilo / Style version (commit/tag)
